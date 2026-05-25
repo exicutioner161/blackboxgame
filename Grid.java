@@ -1,5 +1,4 @@
 import java.awt.Point;
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,7 +57,7 @@ public class Grid {
         return switch (y) {
             case 0 -> 2;
             case 11 -> 0;
-            default -> throw new InvalidParameterException("Invalid y value: " + y);
+            default -> throw new IllegalArgumentException("Invalid y value: " + y);
         };
     }
 
